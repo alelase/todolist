@@ -1,1 +1,6 @@
-<button (contextmenu)="test($event)" class="clear-completed">Clear completed</button>
+<button
+  [hidden]="list.countCompleted()==0"
+  (contextmenu)="test($event)"
+  (click)="list.removeDone()"
+  class="clear-completed">Clear completed</button>
+{{list.length}}

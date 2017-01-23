@@ -1,10 +1,12 @@
 <!-- Item -->
-<li>
+<li [ngClass]="{'completed': item.done }">
 
   <div class="view">
     <input class="toggle"
+           type="checkbox"
            [checked]="item.done"
-           type="checkbox">
+           (change)="onChange(item)"
+           >
 
     <label>{{ item.title }}</label>
 

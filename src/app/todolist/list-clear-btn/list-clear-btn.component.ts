@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
+import {Todolist} from "../todolist.service";
 
 @Component({
   selector: 'hpe-list-clear-btn',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListClearBtnComponent implements OnInit {
 
-  constructor() { }
+  @Output() clearDone = new EventEmitter();
+
+  constructor(private list: Todolist) { }
 
   ngOnInit() {
   }

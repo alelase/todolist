@@ -11,6 +11,6 @@
 
   <hpe-list-footer>
     <hpe-list-counter [count]="list.countRemains()"></hpe-list-counter>
-    <hpe-list-clear-btn></hpe-list-clear-btn>
+    <hpe-list-clear-btn (clearDone)="list.removeDone()"></hpe-list-clear-btn>
   </hpe-list-footer>
 </section>

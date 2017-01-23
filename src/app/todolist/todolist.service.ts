@@ -26,13 +26,31 @@ export class Todolist {
 
   public removeItem(item: Item): void {
 
-    //const index = this
-    this.items.splice(this.items.indexOf((item), 1));
-
+    this.items.splice(this.items.indexOf(item), 1);
   }
 
   public countRemains(): number {
 
-    return this.items.length;
+    // return this.items.length;
+    return this.items.filter((x)=>{
+      return !x.done;
+    }).length;
   }
+
+  public countCompleted(): number {
+    return this.items.filter((x)=>{
+      return x.done;
+    }).length;
+  }
+
+  public removeDone() : void {
+
+      for (let i = this.items.length - 1; i >= 0; i--) {
+        if(this.items[i].done) {
+          this.items.splice(i, 1);
+      }
+    }
+  }
+
+
 }

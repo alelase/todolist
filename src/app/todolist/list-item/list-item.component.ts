@@ -13,4 +13,9 @@ export class ListItemComponent{
   constructor(private list: Todolist) {
 
   }
+
+  private onChange(item) {
+    item.done = !item.done;
+  }
+
 }

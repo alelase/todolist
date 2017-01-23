@@ -1,4 +1,4 @@
 <input class="new-todo"
-       (keydown.enter)="valueAdded.emit($event.target.value);this.value=''"
+       (keydown.enter)="valueAdded.emit($event.target.value); $event.target.value = '';"
        placeholder="What needs to be done?"
        autofocus>
