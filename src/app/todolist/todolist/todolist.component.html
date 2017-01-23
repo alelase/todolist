@@ -1,0 +1,16 @@
+<section class="todoapp">
+  <hpe-list-header>
+    <hpe-list-title title="todos"></hpe-list-title>
+    <hpe-list-input (valueAdded)="list.addItem($event)"></hpe-list-input>
+  </hpe-list-header>
+
+  <hpe-list-main>
+    <hpe-list-toggle></hpe-list-toggle>
+    <hpe-list-items [items]="list.items"></hpe-list-items>
+  </hpe-list-main>
+
+  <hpe-list-footer>
+    <hpe-list-counter [count]="list.countRemains()"></hpe-list-counter>
+    <hpe-list-clear-btn></hpe-list-clear-btn>
+  </hpe-list-footer>
+</section>

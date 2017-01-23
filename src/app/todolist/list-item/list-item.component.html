@@ -1,0 +1,17 @@
+<!-- Item -->
+<li>
+
+  <div class="view">
+    <input class="toggle"
+           [checked]="item.done"
+           type="checkbox">
+
+    <label>{{ item.title }}</label>
+
+    <button (click)="list.removeItem(item)" class="destroy"></button>
+
+  </div>
+
+  <input class="edit">
+
+</li>
