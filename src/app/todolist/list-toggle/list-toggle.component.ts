@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, APP_BOOTSTRAP_LISTENER} from '@angular/core';
+import {Todolist} from "../todolist.service";
 
 @Component({
   selector: 'hpe-list-toggle',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-toggle.component.css']
 })
 export class ListToggleComponent implements OnInit {
-
-  constructor() { }
+  private _list: Todolist;
+  constructor(list: Todolist) {
+    this._list = list;
+  }
 
   ngOnInit() {
+  }
+
+  toggleAll(val) {
+    console.log(val.checked);
+    this._list.toggleAll(val.checked);
   }
 
 }

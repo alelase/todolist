@@ -52,5 +52,11 @@ export class Todolist {
     }
   }
 
+  public toggleAll(toVal: boolean) : void {
+    this.items.forEach((x) => {
+      x.done = toVal;
+    });
+  }
+
 
 }
