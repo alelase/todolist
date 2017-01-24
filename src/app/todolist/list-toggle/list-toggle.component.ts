@@ -1,4 +1,4 @@
-import {Component, OnInit, Input, APP_BOOTSTRAP_LISTENER} from '@angular/core';
+import {Component, OnInit, Input, APP_BOOTSTRAP_LISTENER, Output, EventEmitter} from '@angular/core';
 import {Todolist} from "../todolist.service";
 
 @Component({
@@ -7,6 +7,8 @@ import {Todolist} from "../todolist.service";
   styleUrls: ['./list-toggle.component.css']
 })
 export class ListToggleComponent implements OnInit {
+  // @Output() itemChecked  = new EventEmitter<void>();
+
   private _list: Todolist;
   constructor(list: Todolist) {
     this._list = list;

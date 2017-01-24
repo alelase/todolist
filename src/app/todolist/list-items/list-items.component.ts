@@ -19,4 +19,9 @@ export class ListItemsComponent implements OnInit {
   ngOnInit() {
   }
 
+
+  getCheck() {
+    console.log('yes2!');
+  }
+
 }

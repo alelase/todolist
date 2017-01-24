@@ -58,5 +58,10 @@ export class Todolist {
     });
   }
 
+  public updateItem(item: Item, newTitle) : void {
+    console.log(newTitle);
+    item.title = newTitle;
+    console.log(item);
+  }
 
 }

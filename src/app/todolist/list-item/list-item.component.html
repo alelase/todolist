@@ -1,11 +1,13 @@
 <!-- Item -->
-<li [ngClass]="{'completed': item.done }">
+<li [ngClass]="{'completed': item.done, 'editing':editing }"
+    (dblclick)="editItem();">
 
   <div class="view">
     <input class="toggle"
            type="checkbox"
            [checked]="item.done"
            (change)="onChange(item)"
+           (click)="itemChecked.emit($event.target)"
            >
 
     <label>{{ item.title }}</label>
@@ -14,6 +16,8 @@
 
   </div>
 
-  <input class="edit">
+  <input class="edit"
+         [value]="item.title"
+         (keydown.enter)="updateItem($event.target.value)">
 
 </li>

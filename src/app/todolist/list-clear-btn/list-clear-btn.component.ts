@@ -8,7 +8,7 @@ import {Todolist} from "../todolist.service";
 })
 export class ListClearBtnComponent implements OnInit {
 
-  @Output() clearDone = new EventEmitter();
+  @Output() clearDone = new EventEmitter<any>();
 
   constructor(private list: Todolist) { }
 

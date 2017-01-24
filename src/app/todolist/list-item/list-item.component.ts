@@ -9,13 +9,24 @@ import {Item, Todolist} from "../todolist.service";
 export class ListItemComponent{
   @Input() item: Item;
   // @Output() removed = new EventEmitter<Item>();
+  @Output() itemChecked  = new EventEmitter<string>();
+
+  editing: boolean;
 
   constructor(private list: Todolist) {
-
   }
 
-  private onChange(item) {
+  private onChange(item: Item) {
     item.done = !item.done;
+  }
+
+  private editItem(): void {
+    this.editing = !this.editing;
+  }
+
+  private updateItem(newVal:string): void {
+    this.editing = false;
+    this.list.updateItem(this.item, newVal);
   }
 
 }
