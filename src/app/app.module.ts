@@ -6,10 +6,12 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {TodolistModule} from "./todolist/todolist.module";
 import { MarkerDirective } from './todolist/marker.directive';
+import { HpIfDirective } from './hp-if.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HpIfDirective
   ],
   imports: [
     BrowserModule,

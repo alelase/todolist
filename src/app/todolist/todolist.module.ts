@@ -13,17 +13,19 @@ import { ListToggleComponent } from './list-toggle/list-toggle.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import {Todolist} from "./todolist.service";
 import {MarkerDirective} from "./marker.directive";
+import { HpUpPipe } from './hp-up.pipe';
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, HttpModule
   ],
-  providers: [Todolist],
+  providers: [Todolist, HpUpPipe],
   declarations: [ListHeaderComponent,
     ListMainComponent, ListFooterComponent,
     ListItemsComponent, ListItemComponent, ListCounterComponent,
     ListClearBtnComponent, ListTitleComponent, ListInputComponent,
-    ListToggleComponent, TodolistComponent, MarkerDirective],
+    ListToggleComponent, TodolistComponent, MarkerDirective, HpUpPipe],
   exports:[TodolistComponent]
 })
 export class TodolistModule { }

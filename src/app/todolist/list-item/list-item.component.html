@@ -10,7 +10,9 @@
            (click)="itemChecked.emit($event.target)"
            >
 
-    <label marker>{{ item.title }}</label>
+    <!--<label marker>{{ item.title | uppercase }} {{ item.created | date: 'short'}}</label>-->
+    <!--<label marker>{{ formatTitle() }} {{ item.created | date}}</label>-->
+    <label marker>{{ item.title | hpUp:'.'}}-{{ item.created | date}}</label>
 
     <button (click)="list.removeItem(item)" class="destroy"></button>
 
