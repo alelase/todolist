@@ -11,7 +11,7 @@ export class ListItemComponent{
   // @Output() removed = new EventEmitter<Item>();
   @Output() itemChecked  = new EventEmitter<string>();
 
-  editing: boolean;
+  private editing: boolean;
 
   constructor(private list: Todolist) {
   }
