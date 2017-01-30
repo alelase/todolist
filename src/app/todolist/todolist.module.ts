@@ -12,13 +12,18 @@ import { ListInputComponent } from './list-input/list-input.component';
 import { ListToggleComponent } from './list-toggle/list-toggle.component';
 import { TodolistComponent } from './todolist/todolist.component';
 import {Todolist} from "./todolist.service";
+import {MarkerDirective} from "./marker.directive";
 
 @NgModule({
   imports: [
     CommonModule
   ],
   providers: [Todolist],
-  declarations: [ListHeaderComponent, ListMainComponent, ListFooterComponent, ListItemsComponent, ListItemComponent, ListCounterComponent, ListClearBtnComponent, ListTitleComponent, ListInputComponent, ListToggleComponent, TodolistComponent],
+  declarations: [ListHeaderComponent,
+    ListMainComponent, ListFooterComponent,
+    ListItemsComponent, ListItemComponent, ListCounterComponent,
+    ListClearBtnComponent, ListTitleComponent, ListInputComponent,
+    ListToggleComponent, TodolistComponent, MarkerDirective],
   exports:[TodolistComponent]
 })
 export class TodolistModule { }

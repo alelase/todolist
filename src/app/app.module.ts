@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import {TodolistModule} from "./todolist/todolist.module";
+import { MarkerDirective } from './todolist/marker.directive';
 
 @NgModule({
   declarations: [

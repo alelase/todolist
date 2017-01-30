@@ -1,5 +1,7 @@
 <!-- List -->
 <ul class="todo-list">
-<hpe-list-item (itemChecked)="getCheck()" *ngFor="let item of items"
-[item]="item"></hpe-list-item>
+<hpe-list-item (itemChecked)="getCheck()"
+               *ngFor="let item of items"
+               [item]="item">
+</hpe-list-item>
 </ul>
